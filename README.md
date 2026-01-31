@@ -24,3 +24,11 @@ O manifesto contem o cabecalho original, a ordem dos arquivos e a chave usada pa
 ## Observacoes
 
 Se alguns arquivos nao existirem no `dungeon.bin`, o extractor cria arquivos vazios e emite avisos no stderr. O compactador reutiliza esses arquivos vazios, mantendo a mesma criptografia para os demais dados.
+
+## Visualizar arquivos .dun
+
+Depois de extrair, use o visualizador para gerar um hexdump e listar strings ASCII:
+
+```bash
+python dungeon_view.py output/p01_d01.dun --strings --out p01_d01_dump.txt
+```
