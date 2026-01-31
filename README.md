@@ -13,6 +13,12 @@ Este repositorio contem duas ferramentas para trabalhar com `dungeon.bin`:
 python dungeon_extract.py dungeon.bin output --manifest manifest.json
 ```
 
+Para tentar varias estrategias de descriptografia:
+
+```bash
+python dungeon_extract.py dungeon.bin output --manifest manifest.json --all-strategies
+```
+
 ### Reempacotar
 
 ```bash
@@ -32,3 +38,5 @@ Depois de extrair, use o visualizador para gerar um hexdump e listar strings ASC
 ```bash
 python dungeon_view.py output/p01_d01.dun --strings --out p01_d01_dump.txt
 ```
+
+Se usou `--all-strategies`, a saida fica em subpastas (ex.: `output/xor-key-le/`). Use a pasta desejada com o visualizador ou com o compactador.
